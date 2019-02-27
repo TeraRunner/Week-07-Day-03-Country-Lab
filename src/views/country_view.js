@@ -18,6 +18,9 @@ CountryView.prototype.render = function (country) {
   const countryName = this.createElement('h1', country.name);
   this.container.appendChild(countryName);
 
+  const img = this.createImage(country);
+  this.container.appendChild(img);
+
   const countryRegionTitle = this.createElement('h2', 'Region:');
   this.container.appendChild(countryRegionTitle);
 
@@ -47,6 +50,12 @@ CountryView.prototype.createLanguageList = function (languages) {
   });
 
   return list;
+};
+
+CountryView.prototype.createImage = function (country) {
+  const img = document.createElement('img');
+  img.src = country.flag;
+  return img;
 };
 
 module.exports = CountryView;
