@@ -54,6 +54,7 @@ CountryView.prototype.createLanguageList = function (languages) {
 
 CountryView.prototype.createImage = function (country) {
   const img = document.createElement('img');
+  img.classList.add('flag-size');
   img.src = country.flag;
   return img;
 };
