@@ -11,6 +11,11 @@ SelectView.prototype.bindEvents = function () {
     const allCountries = event.detail;
     this.populate(allCountries);
   })
+
+  this.element.addEventListener('change', (event) => {
+    const selectedIndex = event.target.value;
+    PubSub.publish('SelectView: Index Sent',selectedIndex);
+  })
 };
 
 SelectView.prototype.populate = function (countryData) {

@@ -10,4 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectElement = document.querySelector('select#countries');
   const selectView = new SelectView(selectElement);
   selectView.bindEvents();
+
+  const countryContainer = document.querySelector('div#country');
+  const countryView = new CountryView(countryContainer);
+  countryView.bindEvents();
 });
