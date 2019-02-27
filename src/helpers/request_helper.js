@@ -16,8 +16,7 @@ RequestHelper.prototype.get = function (onComplete) {
     }
 
     const jsonString = request.responseText; // Response will always be a string
-    const data = JSON.parse(jsonString); // So we transform it into an object
-    console.log(data); // Check that it has correctly transformed to object
+    const data = JSON.parse(jsonString); // So we transform it into an object// Check that it has correctly transformed to object
     onComplete(data); // invoke callback
   })
   request.send();
